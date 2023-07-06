@@ -39,7 +39,7 @@
   <td>15</td>
   <td>1</td>
   <td>0x08</td>
-  <td rowspan="2" align="center">Type IP 0x0800</td>
+  <td rowspan="2">Type IP 0x0800</td>
 </tr>
 <tr>
   <td>16</td>
