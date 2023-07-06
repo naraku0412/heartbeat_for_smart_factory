@@ -46,4 +46,17 @@
   <td>1</td>
   <td>0x00</td>
 </tr>
+<tr>
+  <td>17</td>
+  <td>1</td>
+  <td>0x45</td>
+  <td>Protocol version</td>
+  <td rowspan="10" align="center">IP header 20 Bytes</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td>1</td>
+  <td>0x00</td>
+  <td>TOS(type of service)</td>
+</tr>
 </table>
