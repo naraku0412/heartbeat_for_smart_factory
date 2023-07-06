@@ -1,0 +1,37 @@
+version: "3.3"
+services:
+  edgenode:
+    build: 
+      context: ./src
+      dockerfile: Dockerfile.edgenode
+    environment:
+      - PORT=8081
+    hostname: edgenode
+    container_name: edgenode
+
+  midware:
+    build: 
+      context: ./src
+      dockerfile: Dockerfile.midware
+    environment:
+      - SRC_PORT=8080
+      - DEST_PORT=8081
+    hostname: midware
+    container_name: midware
+    depends_on:
+      - edgenode
+    links:
+      - edgenode
+
+  datacenter:
+    build: 
+      context: ./src
+      dockerfile: Dockerfile.datacenter
+    environment:
+      - PORT=8080
+    hostname: datacenter
+    container_name: datacenter
+    depends_on:
+      - midware
+    links:
+      - midware
